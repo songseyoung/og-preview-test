@@ -46,9 +46,13 @@ images/game1~3.png  1200x630 썸네일
 curl -s https://songseyoung.github.io/og-preview-test/game2.html | grep 'og:'
 ```
 
-## 썸네일 재생성 (macOS, 별도 툴 불필요)
+## 썸네일
 
-배너는 SVG로 그린 뒤 `qlmanage`(QuickLook)로 1200x1200 PNG를 렌더하고 `sips`로 1200x630 중앙 크롭한 것이다.
+`images/game1~3.png` 는 **실제 게임 키아트**(1200x630)다. 교체하려면 같은 파일명으로 덮어쓰고 커밋하면 된다.
+
+### 임시 배너 생성 스크립트 (참고용 / macOS, 별도 툴 불필요)
+
+키아트가 없을 때 쓰던 폴백. 배너는 SVG로 그린 뒤 `qlmanage`(QuickLook)로 1200x1200 PNG를 렌더하고 `sips`로 1200x630 중앙 크롭한 것이다.
 PIL·ImageMagick 등 추가 설치가 필요 없다.
 
 ```bash
