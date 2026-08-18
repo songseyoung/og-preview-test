@@ -30,11 +30,13 @@
   h1{font-size:28px;margin:0 0 8px}
   .sub{color:#9198a1;margin:0 0 32px}
   ul{list-style:none;padding:0}
-  li{margin-bottom:12px}
-  a.card{display:flex;align-items:center;gap:16px;padding:16px;border:1px solid #30363d;border-radius:12px;
+  li{margin-bottom:16px}
+  a.card{display:block;border:1px solid #30363d;border-radius:12px;overflow:hidden;
          text-decoration:none;color:inherit;background:#161b22}
   a.card:hover{border-color:#1f6feb}
-  .dot{width:14px;height:14px;border-radius:50%;flex:none}
+  a.card img{display:block;width:100%;height:auto}
+  .meta{display:flex;align-items:center;gap:12px;padding:14px 16px}
+  .dot{width:12px;height:12px;border-radius:50%;flex:none}
   .t{font-weight:700}
   .s{color:#9198a1;font-size:14px}
   .note{margin-top:36px;padding:16px;border:1px solid #30363d;border-radius:12px;font-size:14px;color:#9198a1}
@@ -47,16 +49,19 @@
 
   <ul>
     <li><a class="card" href="./game1.html">
-      <span class="dot" style="background:#1f6feb"></span>
-      <span><span class="t">코스믹 드리프트</span><br><span class="s">game1.html · /cosmic-drift</span></span>
+      <img src="./images/game1.png" alt="코스믹 드리프트 배너">
+      <span class="meta"><span class="dot" style="background:#7fe3ff"></span>
+      <span><span class="t">코스믹 드리프트</span><br><span class="s">game1.html · /cosmic-drift</span></span></span>
     </a></li>
     <li><a class="card" href="./game2.html">
-      <span class="dot" style="background:#c9341f"></span>
-      <span><span class="t">던전 오브 엠버</span><br><span class="s">game2.html · /dungeon-of-ember</span></span>
+      <img src="./images/game2.png" alt="던전 오브 엠버 배너">
+      <span class="meta"><span class="dot" style="background:#ffab5c"></span>
+      <span><span class="t">던전 오브 엠버</span><br><span class="s">game2.html · /dungeon-of-ember</span></span></span>
     </a></li>
     <li><a class="card" href="./game3.html">
-      <span class="dot" style="background:#1a7f4b"></span>
-      <span><span class="t">픽셀 팜 스토리</span><br><span class="s">game3.html · /pixel-farm-story</span></span>
+      <img src="./images/game3.png" alt="픽셀 팜 스토리 배너">
+      <span class="meta"><span class="dot" style="background:#ffe08a"></span>
+      <span><span class="t">픽셀 팜 스토리</span><br><span class="s">game3.html · /pixel-farm-story</span></span></span>
     </a></li>
   </ul>
 

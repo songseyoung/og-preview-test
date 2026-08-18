@@ -48,5 +48,20 @@ curl -s https://songseyoung.github.io/og-preview-test/game2.html | grep 'og:'
 
 ## 썸네일 재생성 (macOS, 별도 툴 불필요)
 
-SVG를 만들고 `qlmanage`(QuickLook)로 1200x1200 PNG를 뽑은 뒤 `sips`로 1200x630 중앙 크롭.
-자세한 값은 `images/` 안의 결과물 참고. 실제 게임 이미지가 준비되면 같은 파일명으로 덮어쓰면 된다.
+배너는 SVG로 그린 뒤 `qlmanage`(QuickLook)로 1200x1200 PNG를 렌더하고 `sips`로 1200x630 중앙 크롭한 것이다.
+PIL·ImageMagick 등 추가 설치가 필요 없다.
+
+```bash
+python3 assets/generate-banners.py assets          # SVG 3장 생성
+cd assets
+for n in 1 2 3; do
+  qlmanage -t -s 1200 -o . game$n.svg
+  sips -c 630 1200 game$n.svg.png --out ../images/game$n.png
+done
+```
+
+- `assets/generate-banners.py` : 배너 SVG 생성 스크립트 (게임별 색·문구·그래픽 정의)
+- `assets/game1~3.svg` : 렌더 소스
+- 캔버스는 1200x1200이고 실제 배너 영역은 중앙 밴드 `y=285..915`. 이 범위 밖은 크롭으로 잘린다.
+
+**실제 게임 키아트가 준비되면** 위 과정 없이 `images/game1~3.png`를 같은 파일명(1200x630)으로 덮어쓰고 커밋하면 끝이다.
