@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OG 미리보기 테스트 | 게임별 메타태그 PoC</title>
+
+<!-- ===== Open Graph (목록 페이지용) ===== -->
+<meta property="og:type"        content="website">
+<meta property="og:site_name"   content="Newplay 웹스토어 (OG 테스트)">
+<meta property="og:locale"      content="ko_KR">
+<meta property="og:url"         content="https://songseyoung.github.io/og-preview-test/">
+<meta property="og:title"       content="OG 미리보기 테스트 — 게임별 메타태그 PoC">
+<meta property="og:description" content="게임 슬러그마다 링크 미리보기(썸네일·타이틀·설명)를 다르게 보여줄 수 있는지 검증하는 정적 테스트 사이트입니다.">
+<meta property="og:image"       content="https://songseyoung.github.io/og-preview-test/images/game1.png">
+<meta property="og:image:width"  content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="OG 미리보기 테스트 — 게임별 메타태그 PoC">
+<meta name="twitter:description" content="게임 슬러그마다 링크 미리보기를 다르게 보여줄 수 있는지 검증하는 정적 테스트 사이트입니다.">
+<meta name="twitter:image"       content="https://songseyoung.github.io/og-preview-test/images/game1.png">
+
+<meta name="description" content="게임 슬러그마다 링크 미리보기를 다르게 보여줄 수 있는지 검증하는 정적 테스트 사이트입니다.">
+
+<style>
+  :root{color-scheme:light dark}
+  body{margin:0;padding:40px 24px;font-family:-apple-system,"Apple SD Gothic Neo",sans-serif;
+       line-height:1.6;max-width:760px;margin-inline:auto;background:#0d1117;color:#e6edf3}
+  h1{font-size:28px;margin:0 0 8px}
+  .sub{color:#9198a1;margin:0 0 32px}
+  ul{list-style:none;padding:0}
+  li{margin-bottom:12px}
+  a.card{display:flex;align-items:center;gap:16px;padding:16px;border:1px solid #30363d;border-radius:12px;
+         text-decoration:none;color:inherit;background:#161b22}
+  a.card:hover{border-color:#1f6feb}
+  .dot{width:14px;height:14px;border-radius:50%;flex:none}
+  .t{font-weight:700}
+  .s{color:#9198a1;font-size:14px}
+  .note{margin-top:36px;padding:16px;border:1px solid #30363d;border-radius:12px;font-size:14px;color:#9198a1}
+  code{background:#21262d;padding:2px 6px;border-radius:5px;font-size:13px}
+</style>
+</head>
+<body>
+  <h1>OG 미리보기 테스트</h1>
+  <p class="sub">게임 슬러그마다 링크 공유 미리보기가 다르게 나오는지 검증하는 PoC입니다.</p>
+
+  <ul>
+    <li><a class="card" href="./game1.html">
+      <span class="dot" style="background:#1f6feb"></span>
+      <span><span class="t">코스믹 드리프트</span><br><span class="s">game1.html · /cosmic-drift</span></span>
+    </a></li>
+    <li><a class="card" href="./game2.html">
+      <span class="dot" style="background:#c9341f"></span>
+      <span><span class="t">던전 오브 엠버</span><br><span class="s">game2.html · /dungeon-of-ember</span></span>
+    </a></li>
+    <li><a class="card" href="./game3.html">
+      <span class="dot" style="background:#1a7f4b"></span>
+      <span><span class="t">픽셀 팜 스토리</span><br><span class="s">game3.html · /pixel-farm-story</span></span>
+    </a></li>
+  </ul>
+
+  <div class="note">
+    <b>확인 방법</b><br>
+    위 3개 페이지의 URL을 각각 슬랙에 붙여넣어 미리보기 카드가 게임마다 다른지 확인하세요.<br>
+    슬랙은 URL별로 미리보기를 캐시하므로, 재확인할 때는 <code>?v=2</code> 처럼 쿼리를 붙여 새 URL로 테스트하세요.
+  </div>
+</body>
+</html>
